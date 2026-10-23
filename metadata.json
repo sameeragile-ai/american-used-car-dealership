@@ -1,0 +1,6 @@
+{
+  "name": "Apex Motor Co.",
+  "description": "Dallas' premier pre-owned luxury and performance vehicle dealership. Pre-owned. Fully trusted. 150-point certified inspection and 7-day returns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

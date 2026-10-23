@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0A0B0F;
+    --bg-surface: #12141A;
+    --bg-surface-elevated: #1A1D25;
+    --bg-surface-subtle: #242833;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.16);
+    --text-primary: #F4F4F5;
+    --text-secondary: #A1A1AA;
+    --text-muted: #71717A;
+    --color-ignition-start: #FF4D2E;
+    --color-ignition-mid: #FF8A00;
+    --color-ignition-end: #FFC14D;
+    --accent-blue: #3B82F6;
+    --status-success: #22C55E;
+    --status-warning: #F59E0B;
+    --status-error: #EF4444;
+  }
+
+  .light {
+    --bg-main: #FAFAF9;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #F4F4F5;
+    --bg-surface-subtle: #E4E4E7;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.16);
+    --text-primary: #18181B;
+    --text-secondary: #52525B;
+    --text-muted: #71717A;
+    --color-ignition-start: #E03E22;
+    --color-ignition-mid: #EA580C;
+    --color-ignition-end: #D97706;
+    --accent-blue: #2563EB;
+    --status-success: #16A34A;
+    --status-warning: #D97706;
+    --status-error: #DC2626;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom Ignition Gradient utilities */
+.bg-ignition {
+  background: linear-gradient(135deg, #FF4D2E 0%, #FF8A00 55%, #FFC14D 100%);
+}
+
+.text-ignition {
+  background: linear-gradient(135deg, #FF4D2E 0%, #FF8A00 55%, #FFC14D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-ignition {
+  border-image: linear-gradient(135deg, #FF4D2E 0%, #FF8A00 55%, #FFC14D 100%) 1;
+}
+
+.glow-ignition {
+  box-shadow: 0 0 40px -10px rgba(255, 77, 46, 0.35);
+}
+
+.glow-ignition-sm {
+  box-shadow: 0 0 20px -5px rgba(255, 77, 46, 0.25);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
+/* Tabular figures for numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
